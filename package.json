@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "A comprehensive online school platform with course management, student enrollment, and teacher dashboards",
   "main": "server/index.js",
-  "scripts": {
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "nodemon server/index.js",
-    "client": "cd client && npm start",
-    "build": "cd client && npm run build",
-    "install-all": "npm install && cd client && npm install",
-    "start": "node server/index.js",
-    "postinstall": "cd client && npm install && npm run build"
-  },
+"scripts": {
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
+  "server": "nodemon server/index.js",
+  "client": "cd client && npm start",
+  "build": "cd client && npm install && npm run build",
+  "install-all": "npm install && cd client && npm install",
+  "start": "node server/index.js",
+  "heroku-postbuild": "cd client && npm install && npm run build"
+}
   "keywords": ["school", "education", "online", "platform", "courses"],
   "author": "School Platform Team",
   "license": "MIT",
